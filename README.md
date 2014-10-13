@@ -5,12 +5,12 @@ A simple way to make (very simple) HTTP requests, and then work with the respons
 
 Define the request options:
 
-    -- Define various parts of the request.
-    let requestOptions = { requestMethod = "GET"
-                         , requestURL = "http://httpbin.org"
-                         , requestHeaders = [ "Content-Type: text/html"
-                                            , "Accept: text/html"
-                                            ]
+    -- Define various parts of the request with a `request` record.
+    let requestOptions = request { requestMethod = "GET"
+                                 , requestUrl = "http://httpbin.org"
+                                 , requestHeaders = [ "Content-Type: text/html"
+                                                    , "Accept: text/html"
+                                                    ]
         }
 
     -- See what it looks like.
